@@ -1,0 +1,31 @@
+{
+  "name": "reality-check",
+  "description": "This extension shows the level of credibility, content authenticity, and limit the viral spread of fake content, including fake images",
+	"version": "0.1",
+	"manifest_version": 2,
+	"browser_action": {
+		"default_icon": "icon.png",
+		"default_title": "reality-check",
+		"default_popup": "extension.html"
+	},
+	"icons": {
+    "64": "icon.png"
+  },
+	"background":{
+			"scripts":["eventPage.js"],
+			"persistent":false
+	},
+	"content_scripts":[ {
+		"run_at": ["document_end"],
+    "matches": ["http://*/*", "https://*/*"],
+    "js": ["popup.js", "notif.js"]
+  }],
+	"permissions": [
+		"storage",
+		"notifications",
+		"contextMenus",
+		"activeTab",
+    "tabs",
+    "https://document-parser-api.lateral.io/"
+	]
+}
