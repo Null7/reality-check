@@ -1,6 +1,6 @@
 var menuItem = {
     "id": "fakeNewsId",
-    "title": "Fake Validation",
+    "title": "Reality Check",
     "contexts": ["selection"]
 };
 
