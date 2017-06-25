@@ -25,8 +25,8 @@ def is_obscure(body):
     return is_adult or is_racy
 	
 
-###please call :no_adult_content("{\"url\":\"" + link+"\"}")
-###like is_adult_content("{\"url\":\"https://imgix.ranker.com/list_img_v2/7140/347140/original/the-best-porn-studios-u1?w=817&h=427&fm=jpg&q=50&fit=crop\"}")
+###please call :is_obscure("{\"url\":\"" + link+"\"}")
+###like is_obscure("{\"url\":\"https://imgix.ranker.com/list_img_v2/7140/347140/original/the-best-porn-studios-u1?w=817&h=427&fm=jpg&q=50&fit=crop\"}")
 ###return true IF FAKE NEWS; otherwise return false
 	
 	
