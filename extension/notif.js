@@ -1,8 +1,8 @@
   var notifOptions = {
 											type: "basic",
 			                iconUrl: "fake-news.jpg",
-			                title: "Fake News!",
-			                message: "This is a fake news"
+			                title: "Warning!!! Fake News!",
+			                message: "This is a fake! Do not trust!"
 
 													};
                 chrome.notifications.create(notifOptions, callback);

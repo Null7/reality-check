@@ -17,9 +17,6 @@ chrome.contextMenus.onClicked.addListener(function(clickData){
         if (isInt(clickData.selectionText)){
             chrome.storage.sync.get(['fakeNews','percent'], function(budget){
                 var newfakeNews = 0;
-                if (budget.total){
-                    newTotal += parseInt(fake.percent);
-                }
 
                 newTotal += parseInt(clickData.selectionText);
                 chrome.storage.sync.set({'fakeNews': newfakeNews}, function(){
