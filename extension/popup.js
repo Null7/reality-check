@@ -96,6 +96,19 @@ document.addEventListener('DOMContentLoaded', function() {
 
     getMetaData(url, (result) => {
       renderStatus(JSON.stringify(result, null, 4));
+        // const url = "http://localhost:3000/api/python/:" + result.title;
+        // const x = new XMLHttpRequest();
+        // if (!x) {
+        //   alert('Giving up :( Cannot create an XMLHTTP instance');
+        //   return false;
+        // }
+        // x.open('GET', url);
+        // x.send();
+        // // console.log(x.response)
+        // document.getElementById('limit').textContent = x.response.trim();
+
+
+      
     }, function(errorMessage) {
       renderStatus('Cannot parse article ' + errorMessage);
     });

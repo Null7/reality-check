@@ -280,6 +280,6 @@ class SentimentNetwork:
 if __name__ == "__main__":
 	mlp = SentimentNetwork(titles[:-5000], types[:-5000], learning_rate=0.1)
 	mlp.train(titles[:-5000],types[:-5000])
-	mlp.run(str(sys.argv))
+	print(mlp.run(str(sys.argv)))
 	# return 'REAL' if new is real, 'FAKE' otherwise
         

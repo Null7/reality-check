@@ -15,6 +15,7 @@ app.get('/api/python/:title', (req, res) => {
 
   PythonShell.run("titledetection.py", options, (err, results) => {
     res.send(results);
+    console.log(results);
   });
 });
 
