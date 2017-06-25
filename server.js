@@ -4,15 +4,18 @@ const PythonShell = require('python-shell');
 const app = express();
 const port = 3000;
 
-app.get("/api/script/:text", (req, res) => {
+app.get('/api/python/:title', (req, res) => {
+  const options = {
+    mode: 'text',
+    pythonPath: 'C:/Users/jpdhe/AppData/Local/Programs/Python/Python36-32',
+    pythonOptions: ['-u'],
+    scriptPath: './pyfiles/titledetection.py',
+    args: [req.params.title]
+  };
 
-});
-
-app.get('/api/title/:title', (req, res) => {
-
-
-  res.send(body);
-
+  PythonShell.run("titledetection.py", options, (err, results) => {
+    res.send(results);
+  });
 });
 
 app.listen(port, (err) => {  
